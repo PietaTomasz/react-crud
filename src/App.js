@@ -10,7 +10,7 @@ let events = [
     organizer: 'SkyGate',
     location: 'Gliwice',
     date: '18.05.2018',
-    img: 'http://wojtekpieta.pl/patrol/patrol/logo.png'
+    img: 'https://picsum.photos/200/300/?random'
   },
   {
     name: 'React Workshops',
@@ -18,7 +18,7 @@ let events = [
     organizer: 'SkyGate',
     location: 'Gliwice',
     date: '13.06.2018',
-    img: 'http://wojtekpieta.pl/patrol/patrol/logo.png'
+    img: 'https://picsum.photos/200/300/?random'
   }
 ];
 
@@ -71,14 +71,15 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
+      <div id="manager">
       <h1>Events Manager</h1>
       <AddEvent
       onAdd={this.onAdd}
-      />
+      /><div class="grid">
       { this.state.events.map( event => {
         return (
-          <Item
+          
+          <Item class="box"
           key={event.name} 
           {...event}
           onDelete={this.onDelete}
@@ -90,8 +91,9 @@ class App extends Component {
           // date={event.date}
           // img={event.img}
           />
+          
         )
-      } ) }
+      } ) }</div>
       </div>
     );
   }

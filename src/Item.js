@@ -53,14 +53,14 @@ class Item extends Component {
                 </form>
             )
             : (<div>
-          <p>{name}</p>
-          <p>{description}</p>
-          <p>{organizer}</p>
-          <p>{location}</p>
-          <p>{date}</p>
+          <p>Name: {name}</p>
+          <p>Description: {description}</p>
+          <p>Organizer: {organizer}</p>
+          <p>Location: {location}</p>
+          <p>Date: {date}</p>          
           <p><img src="{img}" alt="imgage"></img></p>
           
-          <button onClick={this.onDelete}>Delete</button>
+          <button onClick={this.onDelete}>Delete</button> &nbsp; 
           <button onClick={this.onEdit}>Edit</button>
             </div>)
         }
