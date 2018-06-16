@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Item from './Item';
 import AddEvent from './AddEvent';
-import { Grid } from "semantic-ui-react";
 
 let events = [
   {
@@ -73,8 +72,6 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Grid.Row verticalAlign="middle" align="left">
-      <Grid.Column>
       <h1>Events Manager</h1>
       <AddEvent
       onAdd={this.onAdd}
@@ -95,8 +92,6 @@ class App extends Component {
           />
         )
       } ) }
-      </Grid.Column>
-      </Grid.Row>
       </div>
     );
   }
