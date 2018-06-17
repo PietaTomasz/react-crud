@@ -3,30 +3,17 @@
   transition: all 0.5s ease;
   font-variant: small-caps;
   font-weight: 600;
-  line-height: 0.5;
 }
-/* html, body {
-  height: 100%;
-  width: 100%;  
-  margin: 0;
-  padding: 0;
-}
-#manager {
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  text-align: center;
-} */
 body {
-  background-color: silver;  
+  background-color: grey;  
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
   margin: 0 auto;
   font-size: 1.5rem;
+  /* background: url(./assets/bg.jpg); */
 }
-#manager {
-  margin: 0 auto; 
-  width: 100%;
+h1 {
+  font-size: 4rem;
 }
 .eventBox {
   background-color: gray;
@@ -38,9 +25,13 @@ body {
   text-align: center;
   border-radius: 10px;
   overflow: auto;
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  justify-content: center;
 }
 .eventBox:hover {
-  background-color: yellowgreen;
+  background-color: gold;
   box-shadow: 10px 10px;
   transform: translate(5px, 5px);
 }
@@ -50,7 +41,9 @@ button, input{
 }
 .grid {
   display: flex;
-	flex-wrap: wrap;  
+  flex-wrap: wrap;  
+  align-items: center;
+  justify-content: center;
 }
 button {
   margin: 10px auto;
@@ -62,4 +55,25 @@ button:hover {
 }
 input {
   max-width: 90%;
+  border: 2px solid black;
+  margin: 5px;
+}
+input:focus {
+  background-color: gold;
+}
+.center {
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  justify-content: center;
+}
+.center>div {
+  flex: 1;
+  margin: 10px;
+  border: 2px solid black;
+  padding: 5px;
+}
+.center>div:hover {
+  background-color: gold;
+  cursor: pointer;
 }
