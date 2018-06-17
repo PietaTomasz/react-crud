@@ -13,9 +13,8 @@ class AddEvent extends Component {
         this.imgInput.value = '';
     }
     render() {    
-    return (<div>
-        <button>Add Event</button>
-        <form onSubmit={this.onSubmit}>        
+    return (
+        <form onSubmit={this.onSubmit}>
             <input placeholder="name"
              ref={nameInput => this.nameInput = nameInput} />
             <input placeholder="description"
@@ -30,8 +29,9 @@ class AddEvent extends Component {
             <input placeholder="date"
             ref={dateInput => this.dateInput = dateInput} />
             <input placeholder="img"
-            ref={imgInput => this.imgInput = imgInput} />            
-        </form><p>&nbsp;</p></div>
+            ref={imgInput => this.imgInput = imgInput} /><br />
+            <button>Add Event</button>
+        </form>
     )
   }
 }

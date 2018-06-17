@@ -48,7 +48,7 @@ class Item extends Component {
             <input placeholder="date" defaultValue={date}
             ref={dateInput => this.dateInput = dateInput} />
             <input placeholder="img" defaultValue={img}
-            ref={imgInput => this.imgInput = imgInput} />
+            ref={imgInput => this.imgInput = imgInput} /><br />
             <button> Save</button>
                 </form>
             )

@@ -101,8 +101,8 @@ class App extends Component {
           <div onClick={() => this.sortBy('location')}>Location</div>
           <div onClick={() => this.sortBy('date')}>Date</div>
         </div><p>&nbsp;</p>
-      <p>Filter By:</p>
-      <input type="text" placeholder="Search" onChange={this.filterBy} />
+      <p>Filter By:
+      <input type="text" placeholder="Search" onChange={this.filterBy} /></p>
       <div className="grid">
       { this.state.events.map( event => {
         return (          
