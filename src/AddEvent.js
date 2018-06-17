@@ -4,23 +4,18 @@ class AddEvent extends Component {
     onSubmit = (event) => {
         event.preventDefault();
         this.props.onAdd(
-            this.nameInput.value,
-            this.descriptionInput.value,
-            this.organizerInput.value,
-            this.locationInput.value,
+            this.nameInput.value, this.descriptionInput.value, this.organizerInput.value, this.locationInput.value,
             this.dateInput.value,
             this.imgInput.value);
 
-        this.nameInput.value = '';
-        this.descriptionInput.value = '';
-        this.organizerInput.value = '';
-        this.locationInput.value = '';
+        this.nameInput.value = ''; this.descriptionInput.value = ''; this.organizerInput.value = ''; this.locationInput.value = '';
         this.dateInput.value = '';
         this.imgInput.value = '';
     }
     render() {    
-    return (<div><p>Add Event</p>
-        <form onSubmit={this.onSubmit}>
+    return (<div>
+        <button>Add Event</button>
+        <form onSubmit={this.onSubmit}>        
             <input placeholder="name"
              ref={nameInput => this.nameInput = nameInput} />
             <input placeholder="description"
@@ -35,7 +30,7 @@ class AddEvent extends Component {
             <input placeholder="date"
             ref={dateInput => this.dateInput = dateInput} />
             <input placeholder="img"
-            ref={imgInput => this.imgInput = imgInput} />
+            ref={imgInput => this.imgInput = imgInput} />            
         </form><p>&nbsp;</p></div>
     )
   }

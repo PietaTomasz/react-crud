@@ -48,7 +48,7 @@ class Item extends Component {
             <input placeholder="date" defaultValue={date}
             ref={dateInput => this.dateInput = dateInput} />
             <input placeholder="img" defaultValue={img}
-            ref={imgInput => this.imgInput = imgInput} /><hr/>
+            ref={imgInput => this.imgInput = imgInput} />
             <button> Save</button>
                 </form>
             )
@@ -58,16 +58,13 @@ class Item extends Component {
           <p>Organizer: {organizer}</p>
           <p>Location: {location}</p>
           <p>Date: {date}</p>          
-          <p><img src="{img}" alt="imgage"></img></p>
-          
+          <p><img src="{img}" alt="image"></img></p>          
           <button onClick={this.onDelete}>Delete</button> &nbsp; 
           <button onClick={this.onEdit}>Edit</button>
             </div>)
-        }
-          
+        }          
         </div>
       )
   }
 }
-
 export default Item;

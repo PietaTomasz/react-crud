@@ -80,6 +80,14 @@ class App extends Component {
     arrayCopy.sort(this.compareBy(key));
     this.setState({events: arrayCopy});
   }
+  filterBy = (e) => {
+    let arrayCopy = this.state.events;
+    arrayCopy = arrayCopy.filter(function(item){
+      return item.name.toLowerCase().search(
+        e.target.value.toLowerCase()) !== -1;
+    });
+    this.setState({events: arrayCopy});
+  }
   render() {
     return (
       <div>
@@ -92,7 +100,9 @@ class App extends Component {
           <div onClick={() => this.sortBy('organizer')}>Organizer</div>
           <div onClick={() => this.sortBy('location')}>Location</div>
           <div onClick={() => this.sortBy('date')}>Date</div>
-        </div>
+        </div><p>&nbsp;</p>
+      <p>Filter By:</p>
+      <input type="text" placeholder="Search" onChange={this.filterBy} />
       <div className="grid">
       { this.state.events.map( event => {
         return (          
